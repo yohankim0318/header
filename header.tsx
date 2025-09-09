@@ -1,38 +1,22 @@
-"use client";
-import React from "react";
-
-type HeaderProps = {
-  onNavigate: (page: string) => void;
-  onLogin: () => void;
-  onOpenRegister: () => void;
-};
-
-export default function Header({ onNavigate, onLogin, onOpenRegister }: HeaderProps) {
-  return (
-    <header className="flex items-center justify-between p-4 bg-gray-800 text-white shadow-md">
-      {/* Left side: Logo / App name */}
-      <div
-        className="font-bold text-lg cursor-pointer"
-        onClick={() => onNavigate("search")}
-      >
-        DevIssues
-      </div>
-
-      {/* Center: Solution Registration Button */}
-      <button
-        onClick={onOpenRegister}
-        className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-lg"
-      >
-        Register Solution
-      </button>
-
-      {/* Right side: Icons */}
-      <div className="flex items-center space-x-4">
-        {/* Hamburger menu */}
-        <button onClick={() => alert("Menu clicked!")}>☰</button>
-        {/* User icon */}
-        <button onClick={onLogin}>👤</button>
-      </div>
-    </header>
-  );
-}
+<button onClick={onLogin} className="p-1 hover:bg-gray-700 rounded-lg">
+  <svg
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 16 16"
+    className="w-6 h-6"
+  >
+    <g clipPath="url(#a)">
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M10.27 14.1a6.5 6.5 0 0 0 3.67-3.45q-1.24.21-2.7.34-.31 1.83-.97 3.1M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.48-1.52a7 7 0 0 1-.96 0H7.5a4 4 0 0 1-.84-1.32q-.38-.89-.63-2.08a40 40 0 0 0 3.92 0q-.25 1.2-.63 2.08a4 4 0 0 1-.84 1.31zm2.94-4.76q1.66-.15 2.95-.43a7 7 0 0 0 0-2.58q-1.3-.27-2.95-.43a18 18 0 0 1 0 3.44m-1.27-3.54a17 17 0 0 1 0 3.64 39 39 0 0 1-4.3 0 17 17 0 0 1 0-3.64 39 39 0 0 1 4.3 0m1.1-1.17q1.45.13 2.69.34a6.5 6.5 0 0 0-3.67-3.44q.65 1.26.98 3.1M8.48 1.5l.01.02q.41.37.84 1.31.38.89.63 2.08a40 40 0 0 0-3.92 0q.25-1.2.63-2.08a4 4 0 0 1 .85-1.32 7 7 0 0 1 .96 0m-2.75.4a6.5 6.5 0 0 0-3.67 3.44 29 29 0 0 1 2.7-.34q.31-1.83.97-3.1M4.58 6.28q-1.66.16-2.95.43a7 7 0 0 0 0 2.58q1.3.27 2.95.43a18 18 0 0 1 0-3.44m.17 4.71q-1.45-.12-2.69-.34a6.5 6.5 0 0 0 3.67 3.44q-.65-1.27-.98-3.1"
+        fill="#fff"
+      />
+    </g>
+    <defs>
+      <clipPath id="a">
+        <path fill="#fff" d="M0 0h16v16H0z" />
+      </clipPath>
+    </defs>
+  </svg>
+</button>
