@@ -1,22 +1,40 @@
-<button onClick={onLogin} className="p-1 hover:bg-gray-700 rounded-lg">
-  <svg
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 16 16"
-    className="w-6 h-6"
-  >
-    <g clipPath="url(#a)">
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M10.27 14.1a6.5 6.5 0 0 0 3.67-3.45q-1.24.21-2.7.34-.31 1.83-.97 3.1M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.48-1.52a7 7 0 0 1-.96 0H7.5a4 4 0 0 1-.84-1.32q-.38-.89-.63-2.08a40 40 0 0 0 3.92 0q-.25 1.2-.63 2.08a4 4 0 0 1-.84 1.31zm2.94-4.76q1.66-.15 2.95-.43a7 7 0 0 0 0-2.58q-1.3-.27-2.95-.43a18 18 0 0 1 0 3.44m-1.27-3.54a17 17 0 0 1 0 3.64 39 39 0 0 1-4.3 0 17 17 0 0 1 0-3.64 39 39 0 0 1 4.3 0m1.1-1.17q1.45.13 2.69.34a6.5 6.5 0 0 0-3.67-3.44q.65 1.26.98 3.1M8.48 1.5l.01.02q.41.37.84 1.31.38.89.63 2.08a40 40 0 0 0-3.92 0q.25-1.2.63-2.08a4 4 0 0 1 .85-1.32 7 7 0 0 1 .96 0m-2.75.4a6.5 6.5 0 0 0-3.67 3.44 29 29 0 0 1 2.7-.34q.31-1.83.97-3.1M4.58 6.28q-1.66.16-2.95.43a7 7 0 0 0 0 2.58q1.3.27 2.95.43a18 18 0 0 1 0-3.44m.17 4.71q-1.45-.12-2.69-.34a6.5 6.5 0 0 0 3.67 3.44q-.65-1.27-.98-3.1"
-        fill="#fff"
-      />
-    </g>
-    <defs>
-      <clipPath id="a">
-        <path fill="#fff" d="M0 0h16v16H0z" />
-      </clipPath>
-    </defs>
-  </svg>
-</button>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394 80" width="394" height="80" role="img" aria-label="Login button with avatar and lock">
+  <style>
+    :root{
+      --bg: #ffffff;       /* canvas background (transparent if you prefer) */
+      --panel: #0b7df0;    /* left panel color (avatar background) */
+      --accent: #0a66d9;   /* lock accent */
+      --text: #0b1220;     /* main text color */
+      --icon: #ffffff;     /* icon color on panel */
+    }
+    .label{ font: 700 28px/1 "Inter", "Segoe UI", Arial, sans-serif; fill: var(--text); }
+    .small{ font: 500 12px/1 "Inter", Arial, sans-serif; fill: #6b7480; }
+  </style>
+
+  <!-- left rounded panel with avatar -->
+  <rect x="8" y="8" rx="12" ry="12" width="96" height="64" fill="var(--panel)"/>
+
+  <!-- avatar: head -->
+  <circle cx="56" cy="30" r="11" fill="var(--icon)"/>
+
+  <!-- avatar: shoulders -->
+  <path d="M40 56c4-8 10-12 16-12s12 4 16 12v4H40v-4z" fill="var(--icon)"/>
+
+  <!-- small lock badge overlay on bottom-right of panel -->
+  <g transform="translate(80,44) scale(0.8)">
+    <!-- circular badge -->
+    <circle cx="0" cy="0" r="12" fill="#ffffff" opacity="0.14"/>
+    <!-- lock body -->
+    <rect x="-6" y="-2" width="12" height="10" rx="1.6" fill="var(--icon)"/>
+    <!-- lock shackle -->
+    <path d="M-3 -2a3 3 0 0 1 6 0" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+    <!-- keyhole -->
+    <circle cx="0" cy="1.6" r="1.2" fill="var(--accent)"/>
+  </g>
+
+  <!-- main text -->
+  <text class="label" x="122" y="42">Login</text>
+
+  <!-- optional subtitle small text -->
+  <text class="small" x="122" y="62">Sign in to continue</text>
+</svg>
